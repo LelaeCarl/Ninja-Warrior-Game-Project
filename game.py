@@ -12,7 +12,7 @@ class Game:
     def __init__(self):
         pygame.init()
 
-        pygame.display.set_caption('Ninja Warrior 🥷')
+        pygame.display.set_caption('🥷Ninja Warrior🥷')
         self.screen = pygame.display.set_mode((640, 480))
         self.display = pygame.Surface((320, 240))
 
@@ -40,6 +40,7 @@ class Game:
         self.player = Player(self, (50, 50), (8, 15))
 
         self.tilemap = Tilemap(self, tile_size=16)
+        self.tilemap.load('map.json')
 
         self.scroll = [0, 0]
 
